@@ -1,0 +1,13 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: monografia_modelo.aux
+A level-1 auxiliary file: capitulo1.aux
+A level-1 auxiliary file: capitulo2.aux
+A level-1 auxiliary file: capitulo3.aux
+A level-1 auxiliary file: capitulo4.aux
+I couldn't open style file abnt.bst
+---line 17 of file monografia_modelo.aux
+ : \bibstyle{abnt
+ :               }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: apendice.aux
+I found no style file---while reading file monografia_modelo.aux
+(There were 2 error messages)

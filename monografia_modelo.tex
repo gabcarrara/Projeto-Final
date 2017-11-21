@@ -1,0 +1,408 @@
+
+\documentclass[a4paper,oneside,12pt]{book}
+%\documentclass[a4paper,oneside]{book}
+\pagestyle{myheadings}
+
+\setcounter{secnumdepth}{3}
+
+%%pacote para tabela
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pacotes para acentua��o %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Apenas para testar
+\usepackage{cmap}
+%Apenas para teste
+
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+
+
+%%%apendice
+\usepackage[titletoc]{appendix}
+
+%%%%define uma tabela muito longa
+\usepackage{longtable}
+
+%%cor para tabela
+\usepackage[table,xcdraw]{xcolor}
+
+%%%%%%%%%%%
+%	\usepackage[brazilian]{babel}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage[hyphens]{url}
+%%%%%%%%%%%
+\linespread{1.5} % espaçamento entre linhas
+%%% Outros pacotes úteis - Igor - 05/11/2011
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Insira aqui os pacotes necess�rios
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{indentfirst}
+\usepackage{array}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Formata��o da P�gina                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% horizontal
+\setlength{\hoffset}{-1in}
+
+\setlength{\oddsidemargin}{3.0cm}
+
+\setlength{\textwidth}{160mm} % (210mm - 30mm - 20mm)
+
+\setlength{\parindent}{1.25cm} % identa��o de cada par�grafo
+
+% vertical
+\setlength{\voffset}{-1in}
+\addtolength{\voffset}{2.0cm}
+
+\setlength{\topmargin}{0.0cm}
+
+\setlength{\headheight}{5mm}
+\setlength{\headsep}{5mm}
+
+\setlength{\textheight}{247mm} % (297mm - 30mm - 20mm)
+
+%\setlength{\footskip}{0mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  Capa da Monografia                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+  \begin{center}
+    \Large{\textsc{Universidade Federal Fluminense} \\
+           \textsc{Instituto de Computação} \\
+           \textsc{Departamento de Ciência da Computação}
+          }
+    \par\vspace{3.0cm}
+    \LARGE{Gabriel Reis Carrara}
+%% Descomentar caso tenha outro aluno
+%%       \par
+%%       \LARGE{Lucas de Souza Tito}
+    \par\vspace{3.0cm}
+%    \bigskip
+    \LARGE{Técnicas de Negociação de Requisitos: Uma Revisão Quasi-Sistemática}
+    \par\vfill
+    \Large{Niterói-RJ\\2017}
+  \end{center}
+\end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                Numeracao em romano                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{roman}
+\setcounter{page}{2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Folha de Rosto                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{center}
+
+Gabriel Reis Carrara
+
+
+\vfill
+
+Técnicas de Negociação de Requisitos, Uma Revisão Quasi-Sistemática
+
+\vspace{3.0cm}
+
+\begin{flushright}
+\begin{minipage}{0.50\textwidth}
+
+Trabalho submetido ao Curso de \linebreak Bacharelado em Ciência da
+Computação da Universidade Federal Fluminense como
+requisito parcial para a obtenção do título de Bacharel em Ciência da
+Computação.
+
+\end{minipage}
+\end{flushright}
+
+\vspace{3.0cm}
+
+\begin{flushleft}
+Orientador: Prof. Célio Albuquerque
+\end{flushleft}
+
+\vfill
+
+Niterói-RJ\\2017
+
+\end{center}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 Folha de Aprova��o                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+Gabriel Reis Carrara
+
+\vspace{1.0cm}
+
+Técnicas de Negociação de Requisitos, Uma Revisão Quasi-Sistemática.
+
+\vspace{1.0cm}
+
+\begin{flushright}
+\begin{minipage}{0.5\textwidth}
+
+Trabalho submetido ao Curso de \linebreak Bacharelado em Ciência da
+Computação da Universidade Federal Fluminense como
+requisito parcial para a obtenção do título de Bacharel em Ciência da
+Computação.
+
+\end{minipage}
+\end{flushright}
+
+\vfill
+
+\begin{flushleft}
+
+Aprovado por:
+
+\end{flushleft}
+
+%% Preencher com os nomes dos orientadores e da banca
+
+\vfill
+
+\hrulefill \\Prof. Célio Albuquerque, D.Sc. - Orientador\\UFF\\
+
+\vfill
+
+\hrulefill \\Prof 1 \\UFF\\
+
+\vfill
+
+\hrulefill \\Prof 2 \\UFF\\
+
+\vfill
+
+Niterói-RJ\\2017
+
+\end{center}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  Dedicat�ria                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flushright}
+\begin{minipage}{0.5\textwidth}
+
+\vspace{15.0cm}
+ % espa�o do topo at� o in�cio da dedicat�ria
+
+
+
+\textit{Lucas:
+Gostaria de Dedicar este trabalho à Deus, à minha mãe, Patrícia Andrea, ao meu irmão Caio Vinícius, ao meu avô Florentino e a minha avó Leda, esta falecida, mas que tenho certeza que ficaria extremamente contente e, à todos que acreditaram em mim, familiares, amigos e demais.
+}
+
+\textit{Alexandre:
+Dedico este trabalho a minha famílha, minha namorada e meus amigos, sem os quais
+não só não teria terminado este grande passo da minha vida, como não haveria
+tanta graça em fazê-lo.
+}
+
+\end{minipage}
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 Agradecimentos                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Agradecimentos}
+
+\thispagestyle{myheadings}
+
+\noindent
+
+
+Lucas
+
+Gostaria de agradecer à Deus, por estar comigo em todos os momentos de minha 
+vida e por ter me presenteado com a melhor benção que poderia haver, minha mãe Patrícia 
+Andrea, que agradeço por me amar incondicionalmente e sempre ser um exemplo, à Roberto 
+Carlos, por sempre ter me guiado, por ter me dado condições de ir e vir, além do apoio, de 
+certa maneira, paterno, ao meu irmão Caio Vinícius, que mesmo mais novo, sempre me ajudou e 
+teve orgulho de mim, aos meus avós, Florentino e Leda, por serem eternos em minha mente e 
+no meu coração, como símbolo de sabedoria, à todos os demais familiares, que apesar da 
+distância sempre me apoiaram, à todos os meus amigos e colegas, que aqui destaco Marcelo 
+D'almeida, Kelly Tavares, Victor Olimpio, Nathan Gerhard, André Alvarado, Sandra Fratane, 
+Fernando Belga, Gabriel Carrara, Laiza Veiga, Yasmine Lemos, Kellen Lessa e  Amanda Facce, 
+por sua lealdade, por seu companheirismo, por sempre estarem ao meu lado. Devo ressaltar a 
+relevância da Kelly ao ter me ajudado com o LaTeX e Amanda com alguns, muitos,
+artigos. Agradeço aos meus professores da UFF que contribuíram bastante para
+minha formação; preciso também agradecer aos meus outros professores, os da época de colégio e cursos, que merecem serem lembrados. Agradeço à empresa Muxi, onde trabalho, por 
+ter compreendido minhas ausências, por ter me apoiado e me tratado como um membro da 
+família e neste âmbito, destaco Bruno Moreira (meu gestor), Rodrigo Rodovalho, Felipe Lugão 
+e Roberto Sampaio, que constituíram minha equipe de trabalho, além das meninas do RH, 
+Manoela Barros, Luana Barros e Regina Dell Aera; por último, mas não menos importante, meu 
+parceiro de projeto final, Alexandre Estebanez, por ter vivido comigo momentos tensos na 
+preparação deste trabalho e por ter sido um ótimo amigo onde pude confiar, tendo a certeza, 
+que não fui uma das pessoas mais fáceis de se trabalhar.
+
+
+\clearpage
+
+Alexandre
+
+Agradeço ao meu pai João José, por ter servido de inspiração para entrar nesta área, a minha mãe Maristela, pois sem os seus puxões de orelha eu não
+teria chegado aonde estou. Agradeço a minha namorada Cafer, por todo amor e
+apoio que sempre me motivam a seguir em frente, a meus grandes amigos, Olof,
+Bernardo e Luísa, que sempre estiveram lá por mim quando precisei. Gostaria
+também de agradecer a meus muitos companheiros de UFF, Thaís, Mariana, Vivian,
+Leo, Gabriel e de UFRJ, Pedro, Rafael, Hugo, Rebeca, Jarcy, Pamella, Luiz Carlos
+e Thiago pois estes me acompanharam nessa minha longa jornada pela universidade, e as duas empresas júnior de que fui parte, 
+a EJCM por iniciar minha vida profissional, e a IN Júnior, em especial a diretoria executiva Beatriz, Daniel, Jean, Guilherme, 
+por me ensinar que ainda tenho muito a aprender. E por fim agradeço meu amigo e parceiro de trabalho Lucas Tito, não só pela paciência com a minha pessoa, 
+mas também por ter pegado no meu pé quando era preciso.
+
+
+Nós dois gostaríamos de agradecer à Andrea Magdaleno e à Daniel de Oliveira por
+participarem da banca avaliadora deste trabalho e ao nosso orientador, Marcos
+Kalinowski por ter nos guiado durante a pesquisa e nos ensinado muitas coisas.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%            Resumo na l�ngua vern�cula            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Resumo}
+\addcontentsline{toc}{chapter}{Resumo}
+
+\thispagestyle{myheadings}
+
+[Contexto] Elicitar Requisitos é uma tarefa comumente debatida em um projeto de
+\textit{software}. Depois de prontos, contudo, é de fundamental importância que
+esses requisitos sejam suficientes para que os \textit{stakeholders} consigam atingir seus
+objetivos. Sendo assim, é evidente a importância do uso de técnicas para
+negociar prazo, preço, qualidade e escopo entre as partes. 
+[Objetivo] Este trabalho visa identificar e apresentar características das técnicas que tem sido propostas e/ou utilizadas para a negociação 
+de requisitos de \textit{software}. 
+[Método] Foi conduzida uma revisão quasi-sistemática da literatura. 
+[Resultados] Foram identificados 33 artigos descrevendo 10 diferentes técnicas
+de negociação de requisitos e suas características. Essas características incluem sua descrição, o ambiente em que as técnicas foram descritas, avaliadas ou aplicadas, os tipos de pesquisa que vem sendo publicados, 
+os tipos de estudo primário, os principais achados de cada artigo e as vantagens e desvantagens reportadas para as técnicas.
+[Conclusões] Acreditamos que a revisão quasi-sistemática provê uma interessante visão geral da área e que ela possa ser útil para fundamentar pesquisas futuras neste tópico.
+
+
+\bigskip
+%
+
+\noindent Palavras-chave: \textit{Técnicas, Negociação, Requisitos,
+Engenharia de Software}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Abstract                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\thispagestyle{myheadings}
+
+[Context] Eliciting requirements is a commonly discussed task, however, after they are
+ready, it is essentially important for a software project that these requirements are sufficient for stakeholders to reach their goals. 
+Thus, the importance of using techniques to negotiate schedule, price, quality and scope between the stakeholders is evident. 
+[Goal] This work aims at identifying and presenting characteristics of techniques that have been proposed and/or used to negotiate software requirements. 
+[Method] A quasi-systematic review was conducted. 
+[Results] We identified 33 papers describing 10 different requirements
+negotiation techniques and their characteristics. The characteristics include their description, the environment in which they were described, evaluated or applied, the types of research being published, the types of primary studies, the main findings 
+of the papers and the advantages and disadvantages reported for theses techniques. 
+[Conclusions] We believe that the conducted quasi-systematic review provides an interesting overview of the area and that it may also be useful to ground future research 
+on this topic.
+
+\bigskip
+%
+
+\noindent Keywords: \textit{Techniques, Negotiation, Requirements, Software
+Engineering}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       Sum�rio                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+\thispagestyle{myheadings}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  Lista de Ilustra��es                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de Figuras}
+
+\thispagestyle{myheadings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Lista de Tabelas                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de Tabelas}
+
+\thispagestyle{myheadings}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                Numeracao em arabico                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       Texto                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Separe cada cap�tulo em um arquivo separado
+%%% Os arquivos podem ter qualquer nome
+\include{capitulo1}
+\include{capitulo2}
+\include{capitulo3}
+\include{capitulo4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  Refer�ncias Bibliogr�ficas                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Usar o bibtex
+\cleardoublepage
+\bibliographystyle{abnt}
+\bibliography{bibliografia}%{} % arquivos fonte com a bibliografia
+
+
+%%apendice
+\cleardoublepage
+\begin{appendices}
+\include{apendice}
+\end{appendices}
+
+\end{document}
